@@ -1,27 +1,110 @@
-# Automation Setup Instructions
 
-This project includes two setup files to help you get started quickly:
+Comprehensive Python Development Environment Setup Guide (Windows & macOS)
+============================================================================
 
-## 1. `run_setup.sh`
+1. Install Package Management Tools, VS Code, Python, and Upgrade pip
+---------------------------------------------------------------------
 
-- This is an executable shell script that automates the initial setup process.
-- **How to use:**
-    1. Open a terminal.
-    2. Navigate to the project directory.
-    3. Run the script with:  
-         `/path/to/your_script.sh`
-    4. Follow any prompts that appear.
+🪟 For Windows:
+---------------
+Run: setup_win_dev_env.cmd OR setup_win_dev_env.ps1
 
-## 2. `vscode_python_setup.ipynb`
+Steps Performed:
+- Installs Chocolatey (Windows package manager)
+- Installs Visual Studio Code
+- Installs Python 3
+- Upgrades pip
 
-- This is a Jupyter Notebook that guides you through setting up your Python environment in VS Code.
-- **How to use:**
-    1. Open VS Code.
-    2. Make sure you have the Jupyter extension installed.
-    3. Open `vscode_python_setup.ipynb` in VS Code.
-    4. Follow the instructions in each cell and run them as needed.
+How to Run:
+-----------
+Option A: Using Command Prompt (CMD)
+- Right-click on 'setup_win_dev_env.cmd' and choose 'Run as Administrator'
 
----
+Option B: Using PowerShell
+- Open PowerShell as Administrator
+- Run:
+    Set-ExecutionPolicy Bypass -Scope Process -Force
+    .\setup_win_dev_env.ps1
 
-**Tip:**  
-Run `run_setup.sh` first to install dependencies, then use the notebook for environment configuration and verification.
+
+🍎 For macOS:
+-------------
+Run: setup_mac_dev_env.sh
+
+Steps Performed:
+- Installs Homebrew (macOS package manager)
+- Installs Visual Studio Code via Homebrew
+- Installs latest Python 3 via Homebrew
+- Upgrades pip
+- Adds python3 alias if needed
+
+How to Run:
+-----------
+chmod +x setup_mac_dev_env.sh
+./setup_mac_dev_env.sh
+
+
+2. Set Up a Python Virtual Environment
+--------------------------------------
+Create and configure your Python venv using one of the following scripts.
+Note: myenv is a suggested name for the new code environment. Can be changed to a desired name or remove it and venv will be used as the default name instead.
+
+Ensure the .cmd or .sh file is in the open folder within VS Code by navigating to the folder that contains the script file.
+
+🪟 For Windows:
+---------------
+Open the CMD terminal in VSCode:
+    - Press Ctrl + (backtick) or go to View → Terminal
+    - Make sure the terminal is using Command Prompt
+      If it's not, click the dropdown (v) in the terminal tab and choose "Select Default Profile" → Command Prompt
+Run Command:
+    .\create_venv.cmd myenv
+
+** Make sure to include .\ which means "current directory".
+
+🍎 For macOS/Linux:
+-------------------
+Open the terminal in VSCode:
+    - From the dropdown menu, select 'Terminal' > 'New Terminal'
+Run Command:
+    chmod +x create_venv.sh
+    ./create_venv.sh myenv
+
+What it does:
+- Creates a virtual environment
+- Use the latest available Python to create a virtual environment
+- Activates the environment
+- Installs ipykernel for Jupyter use
+- Registers the kernel as "Python (myenv)" for use in notebooks
+- Optionally accepts packages to install: e.g. ./create_venv.sh myenv numpy pandas
+
+
+3. Install Python Libraries via Jupyter Notebook
+----------------------------------------------------------
+Use the newly created virtual environment from step 2 and the provided `vscode_python_setup.ipynb` notebook to install required packages.
+
+
+A. Activate the Environment
+    Windows: myenv\Scripts\activate
+    macOS/Linux: source myenv/bin/activate
+
+B. Launch VS Code in the Project Folder:
+    code .
+
+C. Open the notebook file: vscode_python_setup.ipynb
+
+D. At the top-right of the notebook interface:
+    - Click the kernel picker
+    - Select: Python (myenv)
+
+E. Run all the cells in the notebook.
+
+
+
+✅ You're Ready!
+--------------
+- Fully functional Python environment
+- Jupyter notebook compatibility in VS Code
+- Isolated project dependencies
+- Easy reproducibility and package management
+

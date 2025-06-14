@@ -58,17 +58,19 @@ Open the CMD terminal in VSCode:
     - Make sure the terminal is using Command Prompt
       If it's not, click the dropdown (v) in the terminal tab and choose "Select Default Profile" → Command Prompt
 Run Command:
-    .\create_venv.cmd myenv
+    {your\path}\create_venv.cmd myenv
 
-** Make sure to include .\ which means "current directory".
+** Change the {your\path} to the actual path where cmd file is stored.
 
 🍎 For macOS/Linux:
 -------------------
 Open the terminal in VSCode:
     - From the dropdown menu, select 'Terminal' > 'New Terminal'
 Run Command:
-    chmod +x create_venv.sh
-    ./create_venv.sh myenv
+    chmod +x {your/path}/create_venv.sh
+    {your/path}/create_venv.sh myenv
+
+** Change the {your/path} to the actual path where cmd file is stored.
 
 What it does:
 - Creates a virtual environment
@@ -83,21 +85,13 @@ What it does:
 ----------------------------------------------------------
 Use the newly created virtual environment from step 2 and the provided `vscode_python_setup.ipynb` notebook to install required packages.
 
+A. Open the notebook file: vscode_python_setup.ipynb
 
-A. Activate the Environment
-    Windows: myenv\Scripts\activate
-    macOS/Linux: source myenv/bin/activate
-
-B. Launch VS Code in the Project Folder:
-    code .
-
-C. Open the notebook file: vscode_python_setup.ipynb
-
-D. At the top-right of the notebook interface:
+B. At the top-right of the notebook interface:
     - Click the kernel picker
     - Select: Python (myenv)
 
-E. Run all the cells in the notebook.
+C. Run all the cells in the notebook.
 
 
 

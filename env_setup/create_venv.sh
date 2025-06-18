@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === CONFIG ===
-VENV_NAME=${1:-venv}  # Default name is 'venv' if none provided
+VENV_NAME=${1:-venv}  # Default name is 'venv' if none is provided
 
 # === CREATE VENV ===
 PYTHON=$(which -a python3 | head -n1)

@@ -1,28 +1,39 @@
-Write-Host "🔧 Starting Windows development environment setup..."
 
-# --- Install Chocolatey if missing ---
-if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
-    Write-Host "🍫 Installing Chocolatey..."
-    Set-ExecutionPolicy Bypass -Scope Process -Force
-    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
-    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-} else {
-    Write-Host "✅ Chocolatey already installed"
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║                  Dev Tool Installer via Winget                   ║
+# ║      Installs VSCode, Python, GitHub Desktop, Notepad++, 7-Zip   ║
+# ╚══════════════════════════════════════════════════════════════════╝
+
+# Check for winget availability
+if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+    Write-Error "❌ winget is not available. Install 'App Installer' from Microsoft Store."
+    exit 1
 }
 
-# --- Install Visual Studio Code ---
-Write-Host "🧰 Installing Visual Studio Code..."
-choco install vscode -y
+# ╔═══════════════════════════════╗
+# ║ Function: Install If Missing  ║
+# ╚═══════════════════════════════╝
+function Install-PackageIfMissing {
+    param (
+        [string]$PackageId,
+        [string]$PackageName
+    )
 
-# --- Install Python ---
-Write-Host "🐍 Installing Python..."
-choco install python -y
+    if (-not (winget list --id $PackageId | Select-String $PackageId)) {
+        Write-Output "Installing $PackageName..."
+        winget install --id $PackageId --silent --accept-source-agreements --accept-package-agreements
+    } else {
+        Write-Output "✅ $PackageName is already installed."
+    }
+}
 
-# --- Upgrade pip ---
-Write-Host "📦 Upgrading pip..."
-python -m pip install --upgrade pip
+# ╔══════════════════════╗
+# ║ Installing Packages  ║
+# ╚══════════════════════╝
+Install-PackageIfMissing "Microsoft.VisualStudioCode" "🧰 Visual Studio Code"
+Install-PackageIfMissing "Python.Python.3" "🐍 Python 3"
+Install-PackageIfMissing "GitHub.GitHubDesktop" "🐙 GitHub Desktop"
+Install-PackageIfMissing "Notepad++.Notepad++" "📝 Notepad++"
+Install-PackageIfMissing "7zip.7zip" "📦 7-Zip"
 
-# --- Confirm Python & pip availability ---
-Write-Host "✅ Python should now be available as 'python' and 'pip' in terminal"
-
-Write-Host "`n✅ Windows dev environment setup complete."
+Write-Output "🎉 All installations are complete!"

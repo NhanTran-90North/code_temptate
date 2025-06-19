@@ -67,7 +67,23 @@ Write-Host "✅ Activating venv and installing packages..."
 pip install --upgrade pip ipykernel
 python -m ipykernel install --user --name $VenvName --display-name "Python ($VenvName)"
 
-# 6. Wrap up
+# 6. Install Python DS libraries with vscode_python_setup.py
+Write-Host "`nSTEP 3: Running vscode_python_setup.py..."
+$ScriptDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
+$PythonScript = Join-Path $ScriptDir "vscode_python_setup.py"
+
+if (Test-Path $PythonScript) {
+    python $PythonScript
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✅ Successfully executed vscode_python_setup.py"
+    } else {
+        Write-Host "⚠️ Error occurred while running vscode_python_setup.py"
+    }
+} else {
+    Write-Host "⚠️ vscode_python_setup.py not found in $ScriptDir. Skipping."
+}
+
+# 7. Wrap up
 Write-Host "`n🎉 All done!" -ForegroundColor Green
 Write-Host "To activate this environment in the future:"
 Write-Host "`t& `"$PWD\$VenvName\Scripts\Activate.ps1`""

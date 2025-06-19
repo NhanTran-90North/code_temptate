@@ -24,6 +24,14 @@ brew install --cask visual-studio-code
 echo "🐍 Installing Python..."
 brew install python
 
+# Install TextMate
+echo "📝 Installing TextMate..."
+brew install --cask textmate
+
+# Install 7-Zip
+echo "📦 Installing 7-Zip..."
+brew install p7zip
+
 # Upgrade pip
 echo "📦 Upgrading pip..."
 pip3 install --upgrade pip

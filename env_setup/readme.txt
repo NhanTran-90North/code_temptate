@@ -1,104 +1,78 @@
+=========================================
+💻 Development Environment Setup Scripts
+=========================================
 
-Comprehensive Python Development Environment Setup Guide (Windows & macOS)
-============================================================================
+This project includes scripts to set up your development environment and create a Python virtual environment, with compatibility for both macOS and Windows.
 
-1. Install Package Management Tools, VS Code, Python, and Upgrade pip
----------------------------------------------------------------------
+📂 File Overview
 
-🪟 For Windows:
----------------
-Run: setup_win_dev_env.cmd OR setup_win_dev_env.ps1
+- setup_env.sh – Shell script for macOS
+- setup_env.ps1 – PowerShell script for Windows
+- README.txt – This instruction guide
+-------------------------------------------
+🧰 What These Scripts Do
 
-Steps Performed:
-- Installs Chocolatey (Windows package manager)
-- Installs Visual Studio Code
-- Installs Python 3
-- Upgrades pip
+Both scripts will:
 
-How to Run:
------------
-Option A: Using Command Prompt (CMD)
-- Right-click on 'setup_win_dev_env.cmd' and choose 'Run as Administrator'
+1. Install essential developer tools (like Python, VS Code, GitHub Desktop)
+2. Set up and activate a Python virtual environment
+3. Install pip and register the virtual environment for use with Jupyter and VS Code
+-------------------------------------------
+📦 Output
 
-Option B: Using PowerShell
-- Open PowerShell as Administrator
-- Run:
-    Set-ExecutionPolicy Bypass -Scope Process -Force
-    .\setup_win_dev_env.ps1
+After completion, you will have:
 
+- A working virtual environment
+- Popular development tools installed
+- Jupyter-compatible Python kernel registered
+- Shortcut instructions on how to activate the venv
+-------------------------------------------
+🧪 Verify Installation
 
-🍎 For macOS:
--------------
-Run: setup_mac_dev_env.sh
+To activate your environment later:
 
-Steps Performed:
-- Installs Homebrew (macOS package manager)
-- Installs Visual Studio Code via Homebrew
-- Installs latest Python 3 via Homebrew
-- Upgrades pip
-- Adds python3 alias if needed
+- macOS: source venv/bin/activate
+- Windows: .\venv\Scripts\Activate.ps1
 
-How to Run:
------------
-chmod +x setup_mac_dev_env.sh
-./setup_mac_dev_env.sh
+To launch VS Code: code .
+To check Python version: python --version
 
+===============================
+**** 🖥️ macOS Instructions ****
+===============================
 
-2. Set Up a Python Virtual Environment
---------------------------------------
-Create and configure your Python venv using one of the following scripts.
-Note: myenv is a suggested name for the new code environment. Can be changed to a desired name or remove it and venv will be used as the default name instead.
+✅ Prerequisites:
+- macOS Terminal
+- Admin privileges (for installing Homebrew and apps)
 
-Ensure the .cmd or .sh file is in the open folder within VS Code by navigating to the folder that contains the script file.
+▶️ How to Run:
 
-🪟 For Windows:
----------------
-Open the CMD terminal in VSCode:
-    - Press Ctrl + (backtick) or go to View → Terminal
-    - Make sure the terminal is using Command Prompt
-      If it's not, click the dropdown (v) in the terminal tab and choose "Select Default Profile" → Command Prompt
-Run Command:
-    {your\path}\create_venv.cmd myenv
+bash setup_env.sh [venv_name]
 
-** Change the {your\path} to the actual path where cmd file is stored.
+- Replace [venv_name] with the name of your desired virtual environment.
+- If not provided, defaults to venv.
 
-🍎 For macOS/Linux:
--------------------
-Open the terminal in VSCode:
-    - From the dropdown menu, select 'Terminal' > 'New Terminal'
-Run Command:
-    chmod +x {your/path}/create_venv.sh
-    {your/path}/create_venv.sh myenv
+💡 Notes:
+- Installs: Homebrew, Python 3, VS Code, GitHub Desktop, TextMate, 7-Zip
+- Adds alias python="python3" to your shell profile (.zshrc or .bash_profile)
+- Activates the environment and registers it as a Jupyter kernel
 
-** Change the {your/path} to the actual path where cmd file is stored.
+=================================
+**** 🪟 Windows Instructions ****
+=================================
 
-What it does:
-- Creates a virtual environment
-- Use the latest available Python to create a virtual environment
-- Activates the environment
-- Installs ipykernel for Jupyter use
-- Registers the kernel as "Python (myenv)" for use in notebooks
-- Optionally accepts packages to install: e.g. ./create_venv.sh myenv numpy pandas
+✅ Prerequisites:
+- PowerShell (run as Administrator is recommended)
+- Internet access
 
+▶️ How to Run:
 
-3. Install Python Libraries via Jupyter Notebook
-----------------------------------------------------------
-Use the newly created virtual environment from step 2 and the provided `vscode_python_setup.ipynb` notebook to install required packages.
+.\setup_env.ps1 -VenvName "myvenv"
 
-A. Open the notebook file: vscode_python_setup.ipynb
+- Replace "myvenv" with your preferred virtual environment name.
+- If not provided, it will default to venv.
 
-B. At the top-right of the notebook interface:
-    - Click the kernel picker
-    - Select: Python (myenv)
-
-C. Run all the cells in the notebook.
-
-
-
-✅ You're Ready!
---------------
-- Fully functional Python environment
-- Jupyter notebook compatibility in VS Code
-- Isolated project dependencies
-- Easy reproducibility and package management
-
+💡 Notes:
+- Uses Windows Package Manager winget to install VS Code, GitHub Desktop, Python, Notepad++, and 7-Zip
+- Creates a Python virtual environment using python -m venv
+- Installs pip, upgrades it, and sets up a Jupyter-compatible kernel

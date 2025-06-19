@@ -71,9 +71,9 @@ source "$SHELL_RC"
 
 echo "✅ macOS setup completed."
 
-# ================================
+# =================================
 # STEP 2: Create Python Virtual Env
-# ================================
+# =================================
 
 # Get VENV name from argument or default to 'venv'
 VENV_NAME=${1:-venv}
@@ -93,8 +93,21 @@ python -m ipykernel install --user --name "$VENV_NAME" --display-name "Python ($
 
 echo "✅ Kernel 'Python ($VENV_NAME)' is registered for Jupyter or VS Code use."
 
-# ===================
+# ===================================
+# STEP 3: Install Python DS Libraries
+# ===================================
+echo "📦 Installing Python data science libraries in virtual environment..."
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+if [ -f "$SCRIPT_DIR/vscode_python_setup.py" ]; then
+  python "$SCRIPT_DIR/vscode_python_setup.py"
+  echo "✅ vscode_python_setup.py executed successfully."
+else
+  echo "⚠️  vscode_python_setup.py not found in $SCRIPT_DIR. Skipping step 3."
+fi
+
+# ============
 # 🎉 All Done!
-# ===================
+# ============
 echo "🎉 Development setup and virtual environment creation complete."
 echo "📂 To activate the environment again, run: source $VENV_NAME/bin/activate"

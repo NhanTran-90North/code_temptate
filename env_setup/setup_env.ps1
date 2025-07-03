@@ -4,6 +4,9 @@
     1. Install VS Code, Github Desktop, Python, etc.
     2. Create a virtual environment
     3. Register the venv with Jupyter/IPython
+    4. Install Python data science libraries
+    5. Install VS Code extensions for Python and documentation
+    
 .DESCRIPTION
     Run in a PowerShell terminal with:
         .\setup_and_create_venv.ps1 [venv_name]
@@ -16,13 +19,13 @@ param (
 
 Write-Host "🔧 Running Windows development environment setup..." -ForegroundColor Cyan
 
-# 1. Check for winget
+# Check for winget
 if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
     Write-Host "❌ winget (Windows Package Manager) is not available. Please install it first from the Microsoft Store." -ForegroundColor Red
     exit 1
 }
 
-# 2. Install applications
+# 1. Install applications
 $packages = @(
     @{ Name = "Microsoft.VisualStudioCode"; Display = "🧰 VS Code" },
     @{ Name = "GitHub.GitHubDesktop"; Display = "🐙 GitHub Desktop" },
@@ -40,7 +43,7 @@ foreach ($pkg in $packages) {
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +
              [System.Environment]::GetEnvironmentVariable("Path", "User")
 
-# 3. Confirm Python install
+# Confirm Python install
 $pythonPath = Get-Command python3 -ErrorAction SilentlyContinue
 if (-not $pythonPath) {
     $pythonPath = Get-Command python -ErrorAction SilentlyContinue
@@ -52,7 +55,7 @@ if (-not $pythonPath) {
 
 Write-Host "✅ Python found at $($pythonPath.Source)" -ForegroundColor Green
 
-# 4. Create virtual environment
+# 2. Create virtual environment
 Write-Host "📦 Creating virtual environment: $VenvName"
 python -m venv $VenvName
 
@@ -61,13 +64,13 @@ if (-not (Test-Path "$VenvName\Scripts\Activate.ps1")) {
     exit 1
 }
 
-# 5. Activate venv and install packages
+# 3. Activate venv and install packages
 Write-Host "✅ Activating venv and installing packages..."
 & "$VenvName\Scripts\Activate.ps1"
 pip install --upgrade pip ipykernel
 python -m ipykernel install --user --name $VenvName --display-name "Python ($VenvName)"
 
-# 6. Install Python DS libraries with vscode_python_setup.py
+# 4. Install Python DS libraries with vscode_python_setup.py
 Write-Host "`nSTEP 3: Running vscode_python_setup.py..."
 $ScriptDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 $PythonScript = Join-Path $ScriptDir "vscode_python_setup.py"
@@ -83,7 +86,16 @@ if (Test-Path $PythonScript) {
     Write-Host "⚠️ vscode_python_setup.py not found in $ScriptDir. Skipping."
 }
 
-# 7. Wrap up
+# 5. Install VS Code Extensions
+$extensionScript = ".\install_vscode_ds_extensions.ps1"
+if (Test-Path $extensionScript) {
+    Write-Host "🔧 Installing VS Code extensions for Python and documentation..."
+    & $extensionScript
+} else {
+    Write-Warning "install_vscode_ds_extensions.ps1 not found. Skipping extension installation."
+}
+
+# Wrap up
 Write-Host "`n🎉 All done!" -ForegroundColor Green
 Write-Host "To activate this environment in the future:"
 Write-Host "`t& `"$PWD\$VenvName\Scripts\Activate.ps1`""

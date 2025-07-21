@@ -6,8 +6,9 @@
 
 # This script is intended for macOS systems and will:
 # 1. Setup your macOS development environment (Homebrew, VS Code, Github Desktop, Python, etc.)
-# 2. Create and activate a Python virtual environment
-# 3. Install pip and register a Jupyter kernel
+# 2. Install pip and register a Jupyter kernel
+# 3. Install Python data science libraries
+# 4. Install VS Code extensions for Python and documentation
 
 # USAGE:
 # Run from terminal: bash setup_and_create_venv.sh [venv_name]
@@ -104,6 +105,17 @@ if [ -f "$SCRIPT_DIR/vscode_python_setup.py" ]; then
   echo "✅ vscode_python_setup.py executed successfully."
 else
   echo "⚠️  vscode_python_setup.py not found in $SCRIPT_DIR. Skipping step 3."
+fi
+
+# ===================================
+# STEP 4: Install VS Code Extensions
+# ===================================
+if [ -f "./install_vscode_ds_extensions.sh" ]; then
+    echo "🔧 Installing VS Code extensions for Python and documentation..."
+    chmod +x ./install_vscode_ds_extensions.sh
+    ./install_vscode_ds_extensions.sh
+else
+    echo "⚠️ install_vscode_ds_extensions.sh not found. Skipping extension installation."
 fi
 
 # ============

@@ -18,17 +18,17 @@ Write-Host "🔧 Running Windows development environment setup..." -ForegroundCo
 
 # 1. Check for winget
 if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
-    Write-Host "❌ winget (Windows Package Manager) is not available. Please install it first from the Microsoft Store." -ForegroundColor Red
+    Write-Host "winget (Windows Package Manager) is not available. Please install it first from the Microsoft Store." -ForegroundColor Red
     exit 1
 }
 
 # 2. Install applications
 $packages = @(
-    @{ Name = "Microsoft.VisualStudioCode"; Display = "🧰 VS Code" },
-    @{ Name = "GitHub.GitHubDesktop"; Display = "🐙 GitHub Desktop" },
-    @{ Name = "Python.Python.3"; Display = "🐍 Python" },
-    @{ Name = "Notepad++.Notepad++"; Display = "📝 Notepad++" },
-    @{ Name = "7zip.7zip"; Display = "📦 7-Zip" }
+    @{ Name = "Microsoft.VisualStudioCode"; Display = "VS Code" },
+    @{ Name = "GitHub.GitHubDesktop"; Display = "GitHub Desktop" },
+    @{ Name = "Python.Python.3"; Display = "Python" },
+    @{ Name = "Notepad++.Notepad++"; Display = "Notepad++" },
+    @{ Name = "7zip.7zip"; Display = "7-Zip" }
 )
 
 foreach ($pkg in $packages) {
@@ -46,23 +46,23 @@ if (-not $pythonPath) {
     $pythonPath = Get-Command python -ErrorAction SilentlyContinue
 }
 if (-not $pythonPath) {
-    Write-Host "❌ Python is not properly installed or not on PATH." -ForegroundColor Red
+    Write-Host "Python is not properly installed or not on PATH." -ForegroundColor Red
     exit 1
 }
 
-Write-Host "✅ Python found at $($pythonPath.Source)" -ForegroundColor Green
+Write-Host "Python found at $($pythonPath.Source)" -ForegroundColor Green
 
 # 4. Create virtual environment
-Write-Host "📦 Creating virtual environment: $VenvName"
+Write-Host "Creating virtual environment: $VenvName"
 python -m venv $VenvName
 
 if (-not (Test-Path "$VenvName\Scripts\Activate.ps1")) {
-    Write-Host "❌ Failed to create virtual environment." -ForegroundColor Red
+    Write-Host "Failed to create virtual environment." -ForegroundColor Red
     exit 1
 }
 
 # 5. Activate venv and install packages
-Write-Host "✅ Activating venv and installing packages..."
+Write-Host "Activating venv and installing packages..."
 & "$VenvName\Scripts\Activate.ps1"
 pip install --upgrade pip ipykernel
 python -m ipykernel install --user --name $VenvName --display-name "Python ($VenvName)"
@@ -75,15 +75,15 @@ $PythonScript = Join-Path $ScriptDir "vscode_python_setup.py"
 if (Test-Path $PythonScript) {
     python $PythonScript
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✅ Successfully executed vscode_python_setup.py"
+        Write-Host "Successfully executed vscode_python_setup.py"
     } else {
-        Write-Host "⚠️ Error occurred while running vscode_python_setup.py"
+        Write-Host "Error occurred while running vscode_python_setup.py"
     }
 } else {
-    Write-Host "⚠️ vscode_python_setup.py not found in $ScriptDir. Skipping."
+    Write-Host "vscode_python_setup.py not found in $ScriptDir. Skipping."
 }
 
 # 7. Wrap up
-Write-Host "`n🎉 All done!" -ForegroundColor Green
+Write-Host "All done!" -ForegroundColor Green
 Write-Host "To activate this environment in the future:"
 Write-Host "`t& `"$PWD\$VenvName\Scripts\Activate.ps1`""

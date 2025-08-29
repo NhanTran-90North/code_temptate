@@ -1,0 +1,109 @@
+﻿State,Measure,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec
+Alabama,Sum of Influenza Deaths,47,39,33,10,0,,0,,0,,,
+Alaska,Sum of Influenza Deaths,0,0,0,0,0,0,0,0,0,0,0,0
+Arizona,Sum of Influenza Deaths,53,54,39,,0,0,0,,0,0,0,11
+Arkansas,Sum of Influenza Deaths,22,35,29,0,0,0,,,,,,
+California,Sum of Influenza Deaths,307,307,189,31,,0,,,0,,,11
+Colorado,Sum of Influenza Deaths,64,39,42,11,15,0,0,0,0,0,0,
+Connecticut,Sum of Influenza Deaths,30,39,15,0,0,0,0,0,0,0,0,0
+Delaware,Sum of Influenza Deaths,,0,10,0,0,0,0,0,0,0,0,0
+District of Columbia,Sum of Influenza Deaths,0,0,0,0,0,0,0,0,0,0,0,0
+Florida,Sum of Influenza Deaths,174,146,117,31,14,,11,10,,,12,40
+Georgia,Sum of Influenza Deaths,108,68,29,11,0,,0,,,,,12
+Hawaii,Sum of Influenza Deaths,0,0,11,0,0,0,0,0,0,0,0,0
+Idaho,Sum of Influenza Deaths,0,10,23,0,0,0,0,0,0,0,0,
+Illinois,Sum of Influenza Deaths,51,55,87,31,0,0,0,0,0,0,0,
+Indiana,Sum of Influenza Deaths,65,52,72,11,0,0,0,0,0,0,,11
+Iowa,Sum of Influenza Deaths,27,23,63,,0,0,0,0,0,,,
+Kansas,Sum of Influenza Deaths,48,50,39,,0,0,0,0,0,0,,0
+Kentucky,Sum of Influenza Deaths,57,35,45,23,0,0,,,,0,,
+Louisiana,Sum of Influenza Deaths,18,36,25,,,,0,0,0,0,0,
+Maine,Sum of Influenza Deaths,0,13,11,0,0,0,0,0,0,0,0,
+Maryland,Sum of Influenza Deaths,27,40,45,28,0,0,,0,0,0,,
+Massachusetts,Sum of Influenza Deaths,66,70,63,33,19,0,0,0,0,0,,11
+Michigan,Sum of Influenza Deaths,53,84,125,52,0,0,0,0,0,0,,12
+Minnesota,Sum of Influenza Deaths,50,56,53,,0,0,0,0,0,0,,
+Mississippi,Sum of Influenza Deaths,10,25,23,,,,0,,,0,,
+Missouri,Sum of Influenza Deaths,61,84,86,0,0,,,,0,,0,12
+Montana,Sum of Influenza Deaths,0,10,20,0,0,0,0,0,0,0,0,0
+Nebraska,Sum of Influenza Deaths,29,13,,0,0,0,0,0,0,0,0,0
+Nevada,Sum of Influenza Deaths,19,18,15,0,0,0,0,0,0,0,0,
+New Hampshire,Sum of Influenza Deaths,,16,10,0,0,0,0,0,0,0,0,
+New Jersey,Sum of Influenza Deaths,41,39,45,24,,0,0,0,0,0,0,
+New Mexico,Sum of Influenza Deaths,33,14,10,0,0,0,0,0,0,0,,0
+New York,Sum of Influenza Deaths,82,81,80,52,22,0,0,0,0,,,
+New York City,Sum of Influenza Deaths,64,53,143,746,,,0,,0,0,0,
+North Carolina,Sum of Influenza Deaths,71,114,85,26,,0,0,,0,0,,
+North Dakota,Sum of Influenza Deaths,12,0,12,0,0,0,0,0,0,0,0,
+Ohio,Sum of Influenza Deaths,96,101,121,23,,,0,0,,0,0,17
+Oklahoma,Sum of Influenza Deaths,48,47,74,11,,,,,,,,15
+Oregon,Sum of Influenza Deaths,30,19,34,0,0,0,0,0,0,0,0,
+Pennsylvania,Sum of Influenza Deaths,104,111,147,38,,0,0,0,0,0,,28
+Puerto Rico,Sum of Influenza Deaths,19,25,15,,,,,,,,,
+Rhode Island,Sum of Influenza Deaths,10,0,0,0,0,0,0,0,0,0,0,0
+South Carolina,Sum of Influenza Deaths,60,50,32,,,0,,,,,,
+South Dakota,Sum of Influenza Deaths,,12,0,0,0,0,0,0,0,0,,0
+Tennessee,Sum of Influenza Deaths,128,68,60,0,,,,,,,,21
+Texas,Sum of Influenza Deaths,241,198,167,53,13,,11,13,15,25,14,71
+United States,Sum of Influenza Deaths,2839,2724,2804,1641,352,76,83,106,112,134,180,507
+Utah,Sum of Influenza Deaths,15,17,19,10,0,0,0,0,0,,0,0
+Vermont,Sum of Influenza Deaths,0,0,,0,0,0,0,0,0,0,0,0
+Virginia,Sum of Influenza Deaths,45,46,44,14,0,0,0,0,,,,10
+Washington,Sum of Influenza Deaths,50,33,51,13,,0,0,0,0,,0,0
+West Virginia,Sum of Influenza Deaths,10,24,32,,0,0,0,0,0,0,0,0
+Wisconsin,Sum of Influenza Deaths,31,47,86,13,0,0,0,0,0,0,0,
+Wyoming,Sum of Influenza Deaths,0,0,0,0,0,0,0,0,0,0,0,0
+Alabama,Sum of Pneumonia Deaths,2122,1501,999,846,796,618,857,1426,1407,1014,791,1206
+Alaska,Sum of Pneumonia Deaths,94,85,76,53,46,23,54,98,148,183,144,129
+Arizona,Sum of Pneumonia Deaths,4714,2638,1504,1249,1142,1102,1991,1540,1404,1407,2059,3996
+Arkansas,Sum of Pneumonia Deaths,1600,1154,682,552,458,411,656,1068,940,889,800,1115
+California,Sum of Pneumonia Deaths,21377,12401,7110,5997,4804,3681,5083,6822,6489,5206,5692,12234
+Colorado,Sum of Pneumonia Deaths,1504,1028,818,1152,764,476,510,540,659,924,1565,1837
+Connecticut,Sum of Pneumonia Deaths,1289,766,571,1026,735,278,203,302,340,379,528,889
+Delaware,Sum of Pneumonia Deaths,491,276,203,241,209,115,86,105,173,181,166,338
+District of Columbia,Sum of Pneumonia Deaths,345,205,158,407,373,170,97,122,106,128,123,232
+Florida,Sum of Pneumonia Deaths,9516,7364,5386,5006,4058,3000,5895,12180,9048,4706,3711,4821
+Georgia,Sum of Pneumonia Deaths,4780,2929,1876,1829,1344,972,1411,3133,3480,2000,1474,2158
+Hawaii,Sum of Pneumonia Deaths,319,243,199,184,152,85,112,209,329,189,147,154
+Idaho,Sum of Pneumonia Deaths,451,360,249,225,142,125,162,293,500,569,460,434
+Illinois,Sum of Pneumonia Deaths,5284,2803,2179,3267,3027,1517,1122,1558,1813,1944,3037,4316
+Indiana,Sum of Pneumonia Deaths,3571,1951,1389,1705,1279,901,857,1188,1689,1778,2158,3443
+Iowa,Sum of Pneumonia Deaths,1085,690,551,484,439,305,294,420,502,661,1034,1080
+Kansas,Sum of Pneumonia Deaths,1244,738,516,435,338,258,293,511,549,568,796,1131
+Kentucky,Sum of Pneumonia Deaths,2662,1922,1426,1130,905,749,728,1276,1762,1592,1421,1994
+Louisiana,Sum of Pneumonia Deaths,1759,1178,975,1310,864,528,884,1847,1261,730,674,1018
+Maine,Sum of Pneumonia Deaths,415,275,291,241,225,130,135,145,191,194,256,301
+Maryland,Sum of Pneumonia Deaths,2331,1365,1161,1584,1331,776,602,633,785,896,898,1513
+Massachusetts,Sum of Pneumonia Deaths,2538,1549,1262,2587,1919,691,531,578,660,819,964,1637
+Michigan,Sum of Pneumonia Deaths,3785,2127,2171,4333,2401,1029,833,1124,1394,1933,3336,4492
+Minnesota,Sum of Pneumonia Deaths,1356,914,756,857,818,479,426,522,619,855,1423,1630
+Mississippi,Sum of Pneumonia Deaths,1853,1198,858,808,774,520,857,1501,1188,797,792,1118
+Missouri,Sum of Pneumonia Deaths,2858,1756,1182,1057,883,668,963,1567,1357,1333,1832,2386
+Montana,Sum of Pneumonia Deaths,317,244,203,127,115,104,112,194,265,497,483,334
+Nebraska,Sum of Pneumonia Deaths,677,439,357,312,228,190,198,278,296,391,663,632
+Nevada,Sum of Pneumonia Deaths,2105,1336,766,728,517,386,810,1193,996,811,994,1663
+New Hampshire,Sum of Pneumonia Deaths,406,246,207,215,183,92,85,117,115,160,191,306
+New Jersey,Sum of Pneumonia Deaths,3875,2093,2084,6362,2733,941,722,811,979,1032,1333,2356
+New Mexico,Sum of Pneumonia Deaths,1048,630,473,373,389,246,262,325,377,502,951,1226
+New York,Sum of Pneumonia Deaths,5129,3261,3102,6265,3118,1348,1160,1304,1606,1697,2083,3407
+New York City,Sum of Pneumonia Deaths,2663,1909,2898,7574,2014,735,650,664,766,701,818,1187
+North Carolina,Sum of Pneumonia Deaths,4910,3085,1978,1777,1596,1106,1214,2353,3089,2495,1968,2993
+North Dakota,Sum of Pneumonia Deaths,248,224,167,167,128,91,89,139,200,399,473,363
+Ohio,Sum of Pneumonia Deaths,6493,3249,2323,2262,1844,1174,1274,1643,2576,3032,3685,6473
+Oklahoma,Sum of Pneumonia Deaths,2421,1714,1111,909,645,519,640,1143,1257,1010,1170,1676
+Oregon,Sum of Pneumonia Deaths,829,697,548,506,396,279,273,510,673,571,539,650
+Pennsylvania,Sum of Pneumonia Deaths,6339,3336,2451,3650,2735,1224,1125,1378,1852,2506,3485,5768
+Puerto Rico,Sum of Pneumonia Deaths,1631,1172,1032,1023,910,484,553,887,915,698,767,968
+Rhode Island,Sum of Pneumonia Deaths,469,217,161,270,304,138,77,104,142,163,214,436
+South Carolina,Sum of Pneumonia Deaths,2026,1653,1037,846,803,594,943,1431,1583,1155,910,1283
+South Dakota,Sum of Pneumonia Deaths,358,232,188,144,130,82,111,128,211,272,437,390
+Tennessee,Sum of Pneumonia Deaths,4113,2637,1870,1555,1240,905,1166,2135,3025,2267,1996,2816
+Texas,Sum of Pneumonia Deaths,13434,9342,5731,4513,3565,2990,6479,9325,8698,6365,6208,7933
+United States,Sum of Pneumonia Deaths,145985,91728,66619,81252,56147,34913,45369,69227,72171,62930,70228,104016
+Utah,Sum of Pneumonia Deaths,682,424,376,265,232,190,228,304,378,465,541,597
+Vermont,Sum of Pneumonia Deaths,123,93,102,77,59,27,32,47,57,70,58,119
+Virginia,Sum of Pneumonia Deaths,2935,1874,1236,1314,989,649,645,917,1309,1263,1119,1701
+Washington,Sum of Pneumonia Deaths,2026,1433,1218,1163,910,610,705,1020,1367,1258,1190,1436
+West Virginia,Sum of Pneumonia Deaths,1248,881,607,545,409,266,275,424,701,711,665,880
+Wisconsin,Sum of Pneumonia Deaths,1593,925,782,693,581,372,385,541,710,1073,1557,1600
+Wyoming,Sum of Pneumonia Deaths,175,138,95,75,53,48,67,91,150,189,216,189

@@ -1,0 +1,49 @@
+DISCHARGE_DISPOSITION,DISCHARGE_DISPOSITION_DESC,DISCHARGESTATUSCODE,DISCHARGESTATUS_DESC,DISC_GROUPING,PAC_DETAIL
+04,DC/TF TO ICF,04,Discharged/Transferred to a Facility That Provides Custodial or Supportive care,Post Acute Care,SNF
+51,DC/TF TO HOSPICE FA,51,Hospice - medical facility,Hospice,
+61,DC/TF TO SWING BED,61,Disch/transf within this institution to hosp-based Medicare approved swing bed,Other,
+85,DC/TF CA CTR/CHILD,85,Discharged/transferred to a Children's Hospital or Cancer Center with a planned acute care hospital inpatient readmission,Other,
+87,DC/TF COURT/LAW ENF,87,Discharged/transferred to court/law enforcement with a planned acute care hospital inpatient readmission,Other,
+89,DC/TF MCARE SWINGBE,89,Discharged/transferred within this institution to hospital-based Medicare-approved swing bed with a planned acute care hospital inpatient readmission,Other,
+93,DC/TF PSYCH HOSP,93,Discharged/transferred to a psychiatric hospital or psychiatric part unit of a hospital with a planned acute care hospital inpatient readmission,Psych Facility,
+94,DC/TF CRITICAL HOSP,94,Discharge/transferred to a Critical Access Hospital (CAH) with a planned acute care hospital inpatient readmission,Other,
+DN,EXPIRED TO DONOR,20,Expired (all in-hospital deaths except for Medicare or CHAMPUS hospice patients),Expired,
+LB,LFT B4 TRTMENT COMP,07,Left against medical advice or discontinued care,AMA/Elopment,
+03,DC/TF TO SNF,03,Discharged/transferred to skilled nursing facility (SNF) with Medicare certification,Post Acute Care,SNF
+09,ADMITTED AS INPT,09,Admitted as inpatient to this hospital - Outpatient Only,Other,
+88,DC/TF FED HLTH FACI,88,Discharged/transferred to a federal hospital with a planned acute care hospital inpatient readmission,Other,
+LT,DC/TF TO LTAC,63,Discharged/transferred to long term care hospital (LTCH),Post Acute Care,LTAC
+40,HOSPICE EXP HOME,40,Hospice expired home,Expired,
+69,DC/TF DISASTER CARE,69,Discharge/transferred to a designated disaster alternative care site,Other,
+92,DC/TF NURS FAC MCAI,92,Discharged/ transferred to a nursing facility certified under Medicaid but not certified under Medicare with a planned acute care hospital inpatient readmission,Other,
+EL,ELOPEMENT,07,Left against medical advice or discontinued care,AMA/Elopment,
+NE,NON-EMERGENT,01,Discharged to home care or self care (routine discharge),Home,
+NP,NON-EMERGENT PAID,01,Discharged to home care or self care (routine discharge),Home,
+01,ROUTINE DISCH HOME,01,Discharged to home care or self care (routine discharge),Home,
+90,DC/TF INPT REHAB FA,90,Discharged/transferred to an inpatient rehabilitation facility (IRF) including rehabilitation distinct part units of a hospital with a planned acute care hospital inpatient readmission,Post Acute Care,Rehab
+95,DC/TF HLTH NOT DEFI,95,Discharge/transfer to another type of healthcare institution not elsewhere defined in this list with a planned acute care hospital inpatient readmission,Other,
+ZZ,LEGACY CONVERSION,00,Unknown,Other,
+65,DC/TF TO PSYCH HOSP,65,Transferred to a psychiatric hospital or psychiatric part unit of a hospital,Psych Facility,
+84,DC/TF CUSTODIAL CAR,84,Discharged/transferred to custodial or supportive care facility with a planned acute care hospital inpatient readmission,Post Acute Care,SNF
+20,EXPIRED,20,Expired (all in-hospital deaths except for Medicare or CHAMPUS hospice patients),Expired,
+43,DC/TF TO FED HOSP,43,Discharged/transferred to a federal hospital,Other,
+83,DC/TF SNF/MCARE CER,83,Discharged/transferred to skilled nursing facility with Medicare certification with a planned acute care hospital inpatient readmission,Post Acute Care,SNF
+86,DC/TF HOME/ORG HM H,86,Discharged/ transferred to home under care of organized health service organization with a planned acute care hospital inpatient readmission,Home Health,
+42,HOSPICE EXP LOC UNK,42,"Hospice expired, place unknown",Expired,
+81,DC TO HOME/SELF CAR,81,Discharged to Home/Self-care with a planned acute care hospital inpatient readmission,Home,
+CD,CADAVER ORGAN DONOR,20,Expired (all in-hospital deaths except for Medicare or CHAMPUS hospice patients),Expired,
+06,DC/TF HOME HLTH ORG,06,Discharged/transferred to home under care of organized home health service,Home Health,
+07,AGAINST MED ADVICE,07,Left against medical advice or discontinued care,AMA/Elopment,
+08,DC/TF HOME IV PROV,06,Discharged/transferred to home under care of organized home health service,Home Health,
+30,STILL A PATIENT,00,Unknown,Other,
+50,DC/TF TO HOME HOSPC,50,Hospice - home,Hospice,
+62,DC/TRF TO REHAB FAC,62,Disch/transf to another rehab facility including rehab distinct part units of a hospital,Post Acute Care,Rehab
+91,DC/TF MCARE CERT LT,91,Discharged/ transferred to a Medicare-certified long term care hospital (LTCH) with a planned acute care hospital inpatient readmission,Post Acute Care,LTAC
+NS,NOT SEEN - TRIAGED,07,Left against medical advice or discontinued care,AMA/Elopment,
+02,DC/TF OTHER HOSPITA,02,Discharged/transferred to another short term general hospital for inpatient care,Post Acute Care,SNF
+05,DC/TF REF OTHER INS,05,Discharged/transferred to a designated cancer center or children's hospital,Other,
+21,DC/TF TO COURT/LAW,21,Discharged/Transferred to Court/Law Enforcement,Other,
+41,HOSPICE EXP-MED FAC,41,"Hospice expired, med facility",Expired,
+70,DC/TF TO OTH INSTIT,70,Discharged/Transferred to Another Type of Healthcare Institution Not Defined Elsewhere in This Code List,Other,
+82,DC/TF SHORT TERM HO,82,Discharged/transferred to another short-term general hospital for inpatient care with a planned acute care hospital inpatient readmission,Post Acute Care,SNF
+NT,NOT SEEN/NOT TRIAGE,07,Left against medical advice or discontinued care,AMA/Elopment,
